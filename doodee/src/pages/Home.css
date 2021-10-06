@@ -1,0 +1,36 @@
+.home {
+    padding-top: 80px;
+}
+.home-background-image img{
+    width: 100%;
+}
+
+.home-about {
+    text-align: center;
+    margin: 100px 0px;
+}
+
+.home-insta-link {
+
+}
+
+.home-video {
+    margin: 100px 0px;
+}
+
+.home-footer {
+    margin: 100px 100px 50px;
+    display: flex;
+    
+}
+
+.home-footer-name {
+    flex-grow: 1;
+}
+
+.home-footer-info {
+
+}
+.home-footer-contact {
+    margin-left: 100px;
+}
