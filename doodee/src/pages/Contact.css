@@ -1,0 +1,42 @@
+.contact {
+    padding-top: 80px;
+}
+
+.contact_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin : 80px;
+}
+
+.contact_request {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom : 80px;
+    font-size: 30px;
+}
+
+.contact_form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit{
+    cursor: pointer;
+}
+
+.contact_intro {
+
+}
+
+.contact_map {
+
+}
+
+.copyright {
+    text-align: center;
+    font-size: 10px;
+    margin-top: 200px;
+}
