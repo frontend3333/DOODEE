@@ -1,0 +1,93 @@
+.projects {
+    padding-top: 80px;
+}
+
+.projects_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin : 80px;
+}
+
+.projects_links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.housing_link {
+    position: relative;
+    margin-right: 50px;
+
+}
+.housing_link img {
+    width: 480px;
+    height: 280px;
+    z-index: 1;
+}
+.housing_link .housing_btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    cursor: pointer;
+    width: 480px;
+    height: 280px;
+    background-color: rgba(128, 128, 128, 0.637);
+}
+.housing_link .housing_btn .housing_btn_box {
+    width: 140px;
+    height: 40px;
+    position: absolute;
+    top:120px;
+    left:170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid ;
+}
+.housing_link .housing_btn .housing_btn_box:hover {
+    background-color: rgba(75, 74, 74, 0.637);
+    transition: 0.5s;
+}
+
+
+.commercial_link {
+    position: relative;
+}
+.commercial_link img{
+    width: 480px;
+    height: 280px;
+    z-index: 1;
+}
+.commercial_link .commercial_btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    cursor: pointer;
+    width: 480px;
+    height: 280px;
+    background-color: rgba(128, 128, 128, 0.637);
+}
+.commercial_link .commercial_btn .commercial_btn_box {
+    width: 140px;
+    height: 40px;
+    position: absolute;
+    top:120px;
+    left:170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid ;
+}
+.commercial_link .commercial_btn .commercial_btn_box:hover {
+    background-color: rgba(75, 74, 74, 0.637);
+    transition: 0.5s;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 10px;
+    margin-top: 200px;
+}

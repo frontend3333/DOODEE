@@ -5,6 +5,7 @@ import './Header.css';
 
 const Header = () => {
     return (
+        <>
         <div className='header'>
             <div className='logo'>
                 <Link to='/'>
@@ -19,32 +20,36 @@ const Header = () => {
             </div>
             <div className='menus'>
                 <ul>
-                <Link to='/' >
-                    <li className = 'home-btn'>Home</li>
-                </Link>
-                <Link to='/process' >
-                    <li className = 'process-btn'>Process</li>
-                </Link>
-                <div className='projects-dropdown'>
-                    <Link to='/projects'>
-                        <li className = 'projects-btn'>Projects</li>
+                    <Link to='/' >
+                        <li className = 'home-btn'>Home</li>
                     </Link>
-                    <div className='projects-dropdown-menus'>
+                    <Link to='/process' >
+                        <li className = 'process-btn'>Process</li>
+                    </Link>
+                    <div className='projects-dropdown'>
                         <Link to='/projects'>
-                            <li className = 'projects-housing-btn'>Housing</li>
+                            <li className = 'projects-btn'>Projects</li>
                         </Link>
-                        <Link to='/projects'>
-                            <li className = 'projects-commercial-btn'>Commercial</li>
-                        </Link>
+                        <div className='projects-dropdown-menus'>
+                            <Link to='/housing'>
+                                <li className = 'projects-housing-btn'>Housing</li>
+                            </Link>
+                            <Link to='/commercial'>
+                                <li className = 'projects-commercial-btn'>Commercial</li>
+                            </Link>
+                        </div>
                     </div>
-                </div>
-                <Link to='/estimates'>
-                    <li className = 'estimates-btn'>Estimates</li>
-                </Link>
+                    <Link to='/estimates'>
+                        <li className = 'estimates-btn'>Estimates</li>
+                    </Link>
+                    <Link to='/contact'>
+                        <li className = 'contact-btn'>Contact Us</li>
+                    </Link>
                 </ul>
                 
             </div>
         </div>
+        </>
     );  
 };
 

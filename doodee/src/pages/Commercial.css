@@ -1,0 +1,10 @@
+.commercial {
+    padding-top: 80px;
+}
+
+.commercial_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin : 80px;
+}
