@@ -8,6 +8,7 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Commercial from './pages/Commercial';
 import Housing from './pages/Housing';
+import KakaoMap from './components/KakaoMap';
 
 
 function App() {
