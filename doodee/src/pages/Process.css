@@ -12,7 +12,7 @@
     display: grid;
     margin: 0 10px 0 10px;
     grid-template-columns: 100%;
-    grid-template-rows: 300px 300px 2fr 3fr auto;
+    grid-template-rows: 300px 300px 2fr 3fr;
 }
 .process-container h1{
     margin:0;
@@ -66,4 +66,12 @@ span{
     /* font-weight: bold; */
     font-family: "BrandonGrotW01-Light";
     margin: 0;
+}
+.cp-grid-container{
+    display: grid;
+    height: 600px;
+    color: lawngreen;
+    grid-template-columns: 103px ;
+    grid-template-rows: 300px 300px 2fr 3fr;
+
 }

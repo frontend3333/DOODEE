@@ -42,6 +42,9 @@ const Process = () => {
                     </div>
                     <div className='third-grid-container'>
                         <h2>construction process</h2>
+                        <div className='cp-grid-container'>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
