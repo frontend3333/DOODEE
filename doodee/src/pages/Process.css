@@ -75,7 +75,6 @@ span{
     grid-template-rows: repeat(7, 83px);
 }
 .third-grid-container img{
-    z-index: 1;
     display: flex;
     top: 100px;
     width:103.99px;
@@ -83,11 +82,7 @@ span{
     margin-top: 50px;
 }
 
-.cp-grid-item:nth-child(1){
-}
-
 .cp-grid-item{
-    z-index: 12;
     border-bottom: 1px dashed rgba(0,0,0,.35);
 }
 .cp-grid-item h2{
