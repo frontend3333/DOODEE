@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import KakaoMap from '../components/KakaoMap';
 import './Contact.css';
+
+
 
 const Contact = () => {
     const [form, setForm] = useState({
@@ -58,8 +61,7 @@ const Contact = () => {
             inputEmailRef.current.focus();
         }
     };
-
-
+    
 
     return (
         <>
@@ -70,6 +72,7 @@ const Contact = () => {
             </div>
             <div className='contact_form'>
                 <input 
+                    className='client_info'
                     type='text'
                     placeholder='Name'
                     name="name"
@@ -78,6 +81,7 @@ const Contact = () => {
                     ref = {inputNameRef}  
                 />
                  <input 
+                    className='client_info'
                     type='text'
                     placeholder='Phone'
                     name="phone"
@@ -86,6 +90,7 @@ const Contact = () => {
 
                 />
                  <input 
+                    className='client_info'
                     type='text'
                     placeholder='E-mail'
                     name="email"
@@ -93,23 +98,37 @@ const Contact = () => {
                     onChange={handleChange}  
                     ref = {inputEmailRef}  
                 />
-                 <input 
+                 <textarea 
+                    className='client_message'
                     type='text'
                     placeholder='Message'
                     name="message"
                     value={message}  
                     onChange={handleChange}   
                  />
-                <button className='submit' onClick={handleSubmit}>
-                    <p>Submit</p>
-                </button>
+                <div className='submit'>
+                    <button className='submit_btn' onClick={handleSubmit}>
+                        <p>Submit</p>
+                    </button>
+                </div>
             </div>
             <div className='contact_intro'>
-                intro
+                <div className='company_info'>
+                    <p><b>Address</b> Seoul, Republic of Korea</p>
+                    <p><b>Tel</b> 010 0000 0000</p>
+                    <p><b>E-mail</b> abc123@naver.com</p>
+                </div>
+                <div className='company_pic'>
+                    <img 
+                        src="https://static.wixstatic.com/media/f1b974_fb928d1903b54e6fb27cc3781eab0e14~mv2.jpg/v1/fill/w_1200,h_500,al_c,q_85/Contactus_%EB%B0%B0%EB%84%88.webp" 
+                        alt="Company Pictures" 
+                    />
+                </div>
             </div>
-            <div className='contact_map'>
-                map
+            <div className='contact_map' >
+                <KakaoMap />
             </div>
+            
             <div className='copyright'>
                 <p>Copyright(c)2020 doodee All Right Reserved</p>
             </div>
