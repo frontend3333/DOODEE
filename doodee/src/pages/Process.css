@@ -2,8 +2,7 @@
 @import url(//db.onlinewebfonts.com/c/39a2c7f346d5cfae7045aeb2fb50d9ad?family=LuloCleanW01-OneBold);
 
 .process-container {
-    position: absolute;
-    top: 82px;
+    margin-top:100px;
     width: 100%;
     height: auto;
 }
@@ -12,7 +11,7 @@
     display: grid;
     margin: 0 10px 0 10px;
     grid-template-columns: 100%;
-    grid-template-rows: 300px 300px 2fr 3fr;
+    grid-template-rows: 300px 300px 800px;
 }
 
 .process-container h1 {

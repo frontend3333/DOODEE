@@ -31,9 +31,6 @@ const Projects = () => {
                     </Link>
                 </div>
             </div>
-            <div className='copyright'>
-                <p>Copyright(c)2020 doodee All Right Reserved</p>
-            </div>
         </div>
         </>
     );  

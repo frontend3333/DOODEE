@@ -1,3 +1,5 @@
+@import url(//db.onlinewebfonts.com/c/6dd2f2510b4a00a5461b2455928209c2?family=BrandonGrotW01-Light);
+
 .contact {
     padding-top: 80px;
 }
@@ -104,8 +106,10 @@
 
 
 
-.copyright {
+.copyright p{
+    color: rgb(51,51,51);
     text-align: center;
-    font-size: 10px;
+    font-family: "BrandonGrotW01-Light";
+    font-size: 16px;
     margin-top: 200px;
 }
