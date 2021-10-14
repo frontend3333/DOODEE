@@ -1,27 +1,46 @@
 .home {
     padding-top: 80px;
 }
+
+.home-background-image {
+    text-align: center;
+}
+
 .home-background-image img{
     width: 100%;
+    max-width: 1290px;
 }
+
 
 .home-about {
     text-align: center;
     margin: 100px 0px;
 }
 
+
 .home-insta-link {
 
 }
 
+
 .home-video {
     margin: 100px 0px;
+    text-align: center;
+    
 }
 
+.home-video video {
+    width: 100%;
+    max-width: 1290px;
+}
+
+
 .home-footer {
+    width: 100%;
+    max-width: 1290px;
     margin: 100px 100px 50px;
     display: flex;
-    
+    justify-content: center;
 }
 
 .home-footer-name {
