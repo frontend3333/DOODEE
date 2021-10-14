@@ -8,8 +8,8 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Commercial from './pages/Commercial';
 import Housing from './pages/Housing';
-import KakaoMap from './components/KakaoMap';
 import Footer from './Footer/Footer'
+import View1 from './ProjectPage/Housing/View1';
 
 function App() {
   return (
@@ -22,6 +22,7 @@ function App() {
       <Route path='/commercial' component={Commercial} />
       <Route path='/estimates' component={Estimates} />
       <Route path='/contact' component={Contact} />
+      <Route path='/view/1' component={View1} />
       <Footer/>
     </>
   );

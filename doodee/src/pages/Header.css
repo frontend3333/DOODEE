@@ -1,9 +1,13 @@
 .header {
     display: flex;
     position: fixed;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
     top:0;
-    width: 100%;
-    height: 42px;
+    width:100%;
+    max-width: 1250px;
+    height: 40px;
     padding: 20px;
     background-color: white;
     z-index: 100;
@@ -20,6 +24,7 @@
 
 .phone-num {
     margin: 20px 10px 10px;
+    min-width: 110px;
 }
 
 .menus {
