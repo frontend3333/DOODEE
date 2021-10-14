@@ -128,8 +128,6 @@ const Contact = () => {
             <div className='contact_map' >
                 <KakaoMap />
             </div>
-
-            
         </div>
         </>
     );  
