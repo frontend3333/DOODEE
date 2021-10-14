@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import KakaoMap from '../components/KakaoMap';
 import './Contact.css';
 
-// adfasd
+
 
 const Contact = () => {
     const [form, setForm] = useState({
