@@ -128,10 +128,6 @@ const Contact = () => {
             <div className='contact_map' >
                 <KakaoMap />
             </div>
-            
-            <div className='copyright'>
-                <p>Copyright(c)2020 doodee All Right Reserved</p>
-            </div>
         </div>
         </>
     );  
