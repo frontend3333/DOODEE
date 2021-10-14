@@ -54,8 +54,8 @@
     justify-content: center;
     align-items: center;
     grid-column: 1/4;
-
 }
+
 .submit_btn{
     cursor: pointer;
     width: 90px;
@@ -67,20 +67,13 @@
     background-color: black;
     padding: 0px;
     margin: 0px;
-
 }
-/* .submit_btn p {
-    margin: 0px;
-} */
 
-.contact_intro {
-
-}
 .company_info {
     text-align: center;
-    margin: 80px 0px 30px; 
-
+    margin: 80px 0px 30px;
 }
+
 .company_info p {
     margin: 0px;
 }
@@ -103,8 +96,6 @@
     align-items: center;
     margin: 100px 0;
 }
-
-
 
 .copyright p{
     color: rgb(148, 104, 104);
