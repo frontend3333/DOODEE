@@ -12,6 +12,7 @@ const Process = () => {
                         <h1>
                             <span>process</span>
                         </h1>
+                        
                     </div>
                     <div className='second-grid-item'>
                         <div className='interior-flex-container'>
