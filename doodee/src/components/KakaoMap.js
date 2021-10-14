@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './KakaoMap.css'
 
 const { kakao } = window;
@@ -6,8 +6,13 @@ const { kakao } = window;
 const KakaoMap = () => {
   
   const [_map,_setMap] = useState();
-  const [_overlay,_setOverlay] = useState();
+  const [_overlay,_setOverlay] = useState('true');
+  const [_closeBtn,_setCloseBtn] = useState();
+  const closeRef = useRef(null);
 
+
+ 
+  
   useEffect(() => {
     const container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
 
@@ -18,33 +23,35 @@ const KakaoMap = () => {
     }; 
 
     const map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+    
     map.setZoomable(false); //스크롤 줌 막기
     
     
-    // 마커가 표시될 위치입니다 
-    const markerPosition  = new kakao.maps.LatLng(37.563, 126.903); 
+    // 마커
+    const markerPosition  = new kakao.maps.LatLng(37.563, 126.903); // 마커가 표시될 위치입니다
 
-    // 마커를 생성합니다
+    
     const marker = new kakao.maps.Marker({
         position: markerPosition,
         map: map,
         clickable: true
-    }); 
+    });  
 
-    marker.setMap(map);
+    marker.setMap(map);  // 마커를 표시합니다
 
+
+    // 커스텀오버레이
     const content = '<div class="wrap">' +    
     '    <div class="info">' +    
     '        <div class="title">' + 
     '            DooDee' + 
-    '            <div id="close_btn" class="close" onclick="function(){consolo.log("click")}" title="닫기"></div>' + 
+    '            <div id="close_btn" class="close" onClick=closeOverlay() title="닫기"></div>' + 
     '        </div>' +   
     '    </div>' + 
     '</div>' ;
     ; // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
     
-    // 마커 위에 커스텀오버레이를 표시합니다
-    // 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
+    
     const customOverlay = new kakao.maps.CustomOverlay({
       content: content,
       map: map,
@@ -53,44 +60,58 @@ const KakaoMap = () => {
     });
 
     customOverlay.setMap(map);
+    _setOverlay('true');   // 마커 위에 커스텀오버레이를 표시합니다
+    // 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
 
-    // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
+    console.log(_overlay)
+    
+    
     kakao.maps.event.addListener(marker, 'click', function() {
       customOverlay.setMap(map);
-      console.log('marker');
-    });
+      console.log('show');
+      _setOverlay("false");
+    });  // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
     
-    // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다 
-    const close_btn = document.getElementById("close_btn");
+ 
     const closeOverlay = () => {
       customOverlay.setMap(null);     
-    }
-    kakao.maps.event.addListener(customOverlay, 'click', function() {
-      customOverlay.setMap(map);
-      console.log('marker');
-    });
+    };  // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다
+
+    kakao.maps.event.addListener(customOverlay, 'click', closeOverlay());  // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다 
+  
+     
+ 
     
+    const close_btn = document.getElementById("close_btn");
 
 
-    _setMap(map);
-    _setOverlay(customOverlay);
+    _setMap(map);  //map 객체를 useEffect 밖으로 꺼냄
+    // _setOverlay(customOverlay);
+    _setCloseBtn(close_btn);
   }, []);
 
 
-  // 지도 확대, 축소 컨트롤에서 확대 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
+  // 줌 버튼 함수
   const zoomIn = () => {
     _map.setLevel(_map.getLevel() - 1);
-  }
+  };  // 지도 확대, 축소 컨트롤에서 확대 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
 
 
-  // 지도 확대, 축소 컨트롤에서 축소 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
   const zoomOut = () => {
     _map.setLevel(_map.getLevel() + 1);
-  }
+  };   // 지도 확대, 축소 컨트롤에서 축소 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
 
-  const closeOverlay = () => {
-    _overlay.setMap(null);     
-  }
+
+
+  // const closeOverlay = () => {
+  //   _overlay.setMap(null);     
+  // };
+
+  // _closeBtn.addEventListener("click", function() {
+  //   // _overlay.setMap(null);
+  //   console.log('close');
+  // });
+ 
 
 
   return (

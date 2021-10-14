@@ -50,8 +50,7 @@
     background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png');
 }
 
-/* 확대축소 */
-
+/* 줌 버튼 */
 .custom_zoomcontrol {
     position: absolute;
     right: 10px;
