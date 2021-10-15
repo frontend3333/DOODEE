@@ -50,3 +50,10 @@ figcaption {
     left: 50%;
     transform: translate(-50%, 50%);
 }
+
+
+@media (max-width: 1024px) {
+    .housing {
+        padding-top: 0;
+    }
+}

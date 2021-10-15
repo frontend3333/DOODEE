@@ -1,5 +1,5 @@
 import React from 'react';
-import './Estimates.css'
+// import './Estimates.css'
 
 const Estimates = () => {
     return (
