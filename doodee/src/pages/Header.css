@@ -1,7 +1,6 @@
 .header {
     display: flex;
     position: fixed;
-    position: absolute;
     left: 50%;
     transform: translate(-50%);
     top:0;
@@ -81,7 +80,7 @@
     background-color: #292929;
     border-radius: 2px;
     margin: 4px 0px;
-
+    width: 100%;
 }
 
 
@@ -92,7 +91,12 @@
     .header {
         height: auto;
         display: block;
-        position: relative;
+        position: sticky;
+        top: 0;
+        left: 0;
+        transform: translate(-1%);
+        padding: 10px;
+    
     }
 
     .header .toggle {
@@ -111,6 +115,7 @@
         display: block;
         text-align: left;
         margin: 20px 20px;
+        /* border-top: 1px solid #cacaca; */
     }
 
     .menus .menus-btn li {
@@ -120,10 +125,6 @@
         /* border-bottom: 1px solid #cacaca; */
     }
 
-    .menus .menus-btn:first-child {
-        /* border-top: 1px solid #cacaca; */
-    }
-
     .menus .projects-dropdown-menus {
         margin: 0 40px;
     }
@@ -131,8 +132,8 @@
     .header .toggle-btn {
         display: inline;
         position: absolute;
-        top: 30px;
-        right: 30px;
+        top: 20px;
+        right: 20px;
         cursor: pointer;
 
     }

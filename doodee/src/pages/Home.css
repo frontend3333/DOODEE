@@ -34,13 +34,22 @@
     max-width: 1290px;
 }
 
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
 
 .home-footer {
     width: 100%;
     max-width: 1290px;
-    margin: 100px 100px 50px;
+    margin: 200px 100px 0;
     display: flex;
     justify-content: center;
+    border-top: 1px solid #cacaca;
+    padding-top: 50px;
+
 }
 
 .home-footer-name {
