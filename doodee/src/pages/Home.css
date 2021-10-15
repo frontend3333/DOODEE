@@ -27,8 +27,10 @@
 
 
 .home-footer {
+    width: 100%;
+    max-width: 1290px;
     margin: 100px 100px 50px;
-    display: flex;    
+    display: flex;
     justify-content: center;
 }
 
