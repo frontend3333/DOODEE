@@ -10,9 +10,11 @@ const Estimates = () => {
                 </div>
                 <div className="second-container-item">
                     <div className="Explanation-container">
-                        <h2>공간을 맞추는 인테리어 디자인 두디의</h2>
-                        <h2>온라인을 통한 견적문의상담 양식입니다.</h2>
-                        <h2>빠른 상담문의 원하시면 010-9015-0814 전화주세요</h2>
+                        <span>
+                            "공간을 맞추는 인테리어 디자인 "
+                            <span>두디의</span><br/>
+                        온라인을 통한 견적문의상담 양식입니다.
+                        빠른 상담문의 원하시면 010-9015-0814 전화주세요</span>
                     </div>
                 </div>
                 <div className="third-container-item">

@@ -1,13 +1,19 @@
 @import url(//db.onlinewebfonts.com/c/6dd2f2510b4a00a5461b2455928209c2?family=BrandonGrotW01-Light);
 @import url(//db.onlinewebfonts.com/c/39a2c7f346d5cfae7045aeb2fb50d9ad?family=LuloCleanW01-OneBold);
 
-
+/*All*/
 .Estimates-container{
     margin-top:100px; /*for header*/
     width: 100%;
     height: auto;
 }
 
+/*Container*/
+.first-container-item{
+    height: 300px;
+}
+
+/*Text*/
 .first-container-item h1{
     margin: 0;
     text-align: center;
@@ -15,6 +21,17 @@
     font-size: 38px;
     font-weight: bold;
     font-style: normal;
+    line-height: 300px;
     letter-spacing: 0.45em;
     text-transform: uppercase;
+}
+
+.second-container-item .Explanation-container h2{
+    margin: 0;
+    text-align: center;
+    font-family: "맑은 고딕, malgun gothic, apple sd gothic neo, applegothic, sans-serif";
+    font-size:16px;
+    font-weight: normal;
+    line-height: 1.4em;
+    color: rgb(var(51,51,51));
 }
