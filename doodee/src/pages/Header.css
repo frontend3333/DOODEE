@@ -30,7 +30,7 @@
 .menus {
     margin: 0px 10px 0px auto;
 }
-.menus ul {
+.menus .menus-btn {
     list-style: none;
     display: flex;
     margin: 10px 20px;
@@ -62,4 +62,82 @@
 .projects-dropdown:hover .projects-dropdown-menus {
     display: block;
     
+}
+
+.toggle-btn {
+    width: 18px;
+    height: 24px;
+    display: none;
+}
+
+.sr-only {
+    text-indent: -9999px;
+}
+
+.icon-bar {
+    display: block;
+    width: 18px;
+    height: 3px;
+    background-color: #292929;
+    border-radius: 2px;
+    margin: 4px 0px;
+
+}
+
+
+
+/* MEDIA */
+
+@media (max-width: 1024px) {
+    .header {
+        height: auto;
+        display: block;
+        position: relative;
+    }
+
+    .header .toggle {
+        display: none;
+    }
+
+    .header .toggle-on {
+        display: block;
+    }
+
+    .phone-num {
+        display: none;
+    }
+
+    .menus .menus-btn {
+        display: block;
+        text-align: left;
+        margin: 20px 20px;
+    }
+
+    .menus .menus-btn li {
+        width: 100%;
+        margin : 0;
+        padding: 16px 0;
+        /* border-bottom: 1px solid #cacaca; */
+    }
+
+    .menus .menus-btn:first-child {
+        /* border-top: 1px solid #cacaca; */
+    }
+
+    .menus .projects-dropdown-menus {
+        margin: 0 40px;
+    }
+
+    .header .toggle-btn {
+        display: inline;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        cursor: pointer;
+
+    }
+
+
+
+
 }

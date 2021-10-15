@@ -8,3 +8,46 @@
     align-items: center;
     margin : 80px;
 }
+
+.housing_grid_container {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    justify-content: center;
+    align-items: center;
+}
+
+.housing_grid_item {
+
+}
+
+.housing_grid_item {
+    margin: 50px 30px;
+}
+
+.housing_grid_item img {
+    width: 350px;
+    height:350px;
+}
+
+figure {
+    margin: 0;
+    position: relative;
+    display: inline;
+
+
+}
+
+figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+
+/* MEDIA */
+@media (max-width: 1024px) {
+    .housing {
+        padding-top: 0;
+    }
+}
