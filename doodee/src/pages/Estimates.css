@@ -1,3 +1,20 @@
+@import url(//db.onlinewebfonts.com/c/6dd2f2510b4a00a5461b2455928209c2?family=BrandonGrotW01-Light);
+@import url(//db.onlinewebfonts.com/c/39a2c7f346d5cfae7045aeb2fb50d9ad?family=LuloCleanW01-OneBold);
+
+
 .Estimates-container{
-    margin-top:100px;
+    margin-top:100px; /*for header*/
+    width: 100%;
+    height: auto;
+}
+
+.first-container-item h1{
+    margin: 0;
+    text-align: center;
+    font-family: "LuloCleanW01-OneBold";
+    font-size: 38px;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
 }
