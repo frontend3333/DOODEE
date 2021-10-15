@@ -21,20 +21,19 @@
 }
 
 .home-video video {
-    max-width: 1290px;
+    /* max-width: 1290px; */
 }
 
-.footer {
+/* .footer {
     display: flex;
     justify-content: center;
-}
+} */
 
 .home-footer {
     margin: 100px 100px 50px;
     display: flex;    
     justify-content: center;
     padding-top: 50px;
-
     border-top: 1px solid #b6b5b5;
 }
 
