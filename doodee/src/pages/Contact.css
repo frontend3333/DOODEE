@@ -104,3 +104,12 @@
     font-size: 16px;
     margin-top: 200px;
 }
+
+
+/* MEDIA */
+@media (max-width: 1024px) {
+    .contact {
+        padding-top: 0;
+    }
+
+}
