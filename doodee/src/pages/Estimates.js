@@ -11,20 +11,28 @@ const Estimates = () => {
                 <div className="second-container-item">
                     <div className="Explanation-container">
                         <span>
-                            "공간을 맞추는 인테리어 디자인 "
-                            <span>두디의</span><br/>
-                        온라인을 통한 견적문의상담 양식입니다.
-                        빠른 상담문의 원하시면 010-9015-0814 전화주세요</span>
+                            공간을 맞추는 인테리어 디자인
+                            <span> 두디</span>
+                            의
+                        </span><br/>
+                        <span>
+                            온라인을 통한 견적문의상담 양식입니다.
+                        </span><br/>
+                        <span>
+                            빠른 상담문의 원하시면 
+                            <span> 010-9015-0814 </span>
+                            전화주세요
+                        </span>    
                     </div>
                 </div>
                 <div className="third-container-item">
                     <div className="estimation-title">
-                        <h1>견적요청</h1>
+                        <h1>견적 요청</h1>
                     </div>
                     <div className="estimation-grid-container">
                         <div className="grid-item">
                             <label className="ipt_top">
-                                <input placeholder="이름"/>
+                                <input type="text" placeholder="이름"/>
                             </label>
                         </div>
                         <div className="grid-item">
@@ -44,7 +52,14 @@ const Estimates = () => {
                         </div>   
                         <div className="grid-item">
                             <label className="ipt_top">
-                                <input placeholder="인테리어 공간"/>                            
+                                <div className="select-container">
+                                    <select>
+                                        <option value="default" hidden>인테리어 공간</option>
+                                        <option value="주거">주거</option>
+                                        <option value="상업">상업</option>    
+                                        <option value="기타">기타</option>    
+                                    </select>                                
+                                </div>      
                             </label>
                         </div>
                         <div className="grid-item">
@@ -136,13 +151,17 @@ const Estimates = () => {
                             </label>
                         </div>
                         <div className="grid-item">
-                            <label className="ipt_off">
-                                <input type="checkbox"/>
-                                <p>이용약관에 동의합니다.</p>
-                            </label>
+                            <div className="checkbox-container">
+                                <label className="ipt_off">
+                                    <input type="checkbox"/>
+                                    <p>이용약관에 동의합니다.</p>
+                                </label>
+                            </div>
                         </div>
                         <div className="grid-item">
-                            <button>견적 요청</button>
+                            <div className="button-container">
+                                <button>견적 요청</button>
+                            </div>
                         </div>
                     </div>
                 </div>
