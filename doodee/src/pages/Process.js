@@ -18,7 +18,7 @@ const Process = () => {
                         <div className='interior-flex-container'>
                             <div className='interior-flex-item'>
                                 <div className='home-interior'>
-                                    <Link to="./Housing.js">                                
+                                    <Link to="/Housing">                                
                                         <img src='https://static.wixstatic.com/media/f1b974_156efcb102334840a2fd06fd4b00d9ec~mv2.jpg/v1/crop/x_359,y_0,w_1997,h_2000/fill/w_148,h_148,al_c,q_80,usm_0.66_1.00_0.01/449.webp' alt='no-img'></img>
                                     </Link>
                                     <h2>주거공간</h2>
@@ -27,7 +27,7 @@ const Process = () => {
                             </div> 
                             <div className='interior-flex-item'>
                                 <div className='commercial-interior'>
-                                    <Link to="./Housing.js">                                
+                                    <Link to="/Commercial">                                
                                         <img src='https://static.wixstatic.com/media/f1b974_91e07437552442d3a538be44d3febc31~mv2.jpg/v1/fill/w_148,h_148,al_c,q_80,usm_0.66_1.00_0.01/shutterstock_1065115037.webp' alt='no-img'></img>
                                     </Link>
                                     <h2>상업공간</h2>
