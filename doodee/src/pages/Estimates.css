@@ -81,6 +81,7 @@
     margin-left: 13px;
     font-family: "맑은 고딕, malgun gothic, apple sd gothic neo, applegothic, sans-serif";
     font-size:15px;
+    user-select : none; /*텍스트 드래그 제거*/
 }
 option{
     margin: 0;
@@ -90,7 +91,8 @@ option{
 /* input */
 .ipt_top, select{
     width:400px;
-    height: 60px; 
+    height: 60px;
+     
 }
 input{
     width:385px;
