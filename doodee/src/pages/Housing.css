@@ -19,21 +19,20 @@
 .housing_grid_container {
     display: grid;
     grid-template-columns: repeat(3, min-content);
+    /* grid-template-columns: repeat(3, minmax(min-content, auto)); */
+    gap: 100px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
     justify-content: center;
-    align-items: center;
 }
 
 .housing_grid_item {
 
-}
-
-.housing_grid_item {
-    margin: 50px 30px;
 }
 
 .housing_grid_item img {
-    width: 350px;
-    height:350px;
+    width: 320px;
+    height:320px;
 }
 
 figure {
@@ -52,8 +51,23 @@ figcaption {
 }
 
 
+
+/* TABLET */
 @media (max-width: 1024px) {
     .housing {
         padding-top: 0;
+    }
+
+    .housing_grid_container {
+        grid-template-columns: repeat(2, min-content);
+    }
+}
+
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .housing_grid_container {
+        grid-template-columns: repeat(1, min-content);
     }
 }
