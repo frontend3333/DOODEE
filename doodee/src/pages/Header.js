@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
  
@@ -7,7 +7,7 @@ const Header = () => {
 
 
     const [isOn, setIsOn] = useState();
-    // console.log(isOn)
+   
     const handleToggle = () => {
         setIsOn(!isOn)
     }
@@ -15,6 +15,17 @@ const Header = () => {
     const toggleOff = () => {
         setIsOn();
     }
+
+    useEffect(() => {
+        window.addEventListener('resize', function(){
+            if(window.innerWidth > 1024) {
+                toggleOff();
+            }
+        });
+        return () => {
+            window.removeEventListener('resize', toggleOff);
+        }
+    },[]);
 
 
     return (
@@ -62,7 +73,7 @@ const Header = () => {
                 
             </div>
             <div className='toggle-btn' onClick={handleToggle}>
-                {/* <div className='sr-only'>Header Menu Toggle Button</div> */}
+                {/* Header Menu Toggle Button */}
                 <span className='icon-bar'></span>
                 <span className='icon-bar'></span>
                 <span className='icon-bar'></span>
