@@ -72,7 +72,7 @@ const Contact = () => {
             </div>
             <div className='contact_form'>
                 <input 
-                    className='client_info'
+                    className='client_info contact_form_items'
                     type='text'
                     placeholder='Name'
                     name="name"
@@ -80,17 +80,16 @@ const Contact = () => {
                     onChange={handleChange}
                     ref = {inputNameRef}  
                 />
-                 <input 
-                    className='client_info'
+                <input 
+                    className='client_info contact_form_items'
                     type='text'
                     placeholder='Phone'
                     name="phone"
                     value={phone}  
                     onChange={handleChange}    
-
                 />
-                 <input 
-                    className='client_info'
+                <input 
+                    className='client_info contact_form_items'
                     type='text'
                     placeholder='E-mail'
                     name="email"
@@ -98,15 +97,15 @@ const Contact = () => {
                     onChange={handleChange}  
                     ref = {inputEmailRef}  
                 />
-                 <textarea 
-                    className='client_message'
+                <textarea 
+                    className='client_message contact_form_items'
                     type='text'
                     placeholder='Message'
                     name="message"
                     value={message}  
                     onChange={handleChange}   
-                 />
-                <div className='submit'>
+                />
+                <div className='submit contact_form_items'>
                     <button className='submit_btn' onClick={handleSubmit}>
                         <p>Submit</p>
                     </button>
