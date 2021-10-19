@@ -1,6 +1,13 @@
 import React from 'react';
 // import './Estimates.css'
 
+const ipt_event = (e) =>{
+    console.log(e.target.value);
+    if (e.target.value === ""){
+        console.log("input plz");
+    }
+};
+
 const Estimates = () => {
     return (
         <>
@@ -32,7 +39,7 @@ const Estimates = () => {
                     <div className="estimation-grid-container">
                         <div className="grid-item">
                             <label className="ipt_top">
-                                <input type="text" placeholder="이름"/>
+                                <input type="text" onClick={ipt_event} placeholder="이름"/>
                             </label>
                         </div>
                         <div className="grid-item">
