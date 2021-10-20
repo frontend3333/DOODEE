@@ -37,34 +37,36 @@ const Home = () => {
                 </video> */}
                 <ReactPlayer 
                     url='https://video.wixstatic.com/video/f1b974_7ee45bc0a5dc4eb980d5970b6b0f924b/720p/mp4/file.mp4'
-                    width='100%'
-                    height='360px'
-                    playing='true'
-                    loop='true'
-                    controls='false'
+                    width= '100%'
+                    height= '360px'
+                    playing= 'true'
+                    loop= 'true'
+                    controls= 'false'
                 />
             </div>
-            <div className='home-footer'>
-                <div className='home-footer-name'>
-                    <h2>DOODEE</h2>
+            <div className='footer'> 
+                <div className='home-footer'>
+                    <div className='home-footer-name'>
+                        <h2>DOODEE</h2>
+                    </div>
+                    <div className='home-footer-info'>
+                        <h3>INFORMATION</h3>
+                        <p>
+                            상호명 두디 DOODEE <br/>
+                            사업자등록번호 000-000-000 <br/>
+                            서울시 마포구 망원동
+                        </p>
+                    </div>
+                    <div className='home-footer-contact'>
+                        <h3>CONTACT</h3>
+                        <p>
+                            010.0000.0000 <br/>
+                            Email : abc@naver.com <br/>
+                            Copyright(c)2020 doodee All Right Reserved  
+                        </p>
+                    </div>
                 </div>
-                <div className='home-footer-info'>
-                    <h3>INFORMATION</h3>
-                    <p>
-                        상호명 두디 DOODEE <br/>
-                        사업자등록번호 000-000-000 <br/>
-                        서울시 마포구 망원동
-                    </p>
-                </div>
-                <div className='home-footer-contact'>
-                    <h3>CONTACT</h3>
-                    <p>
-                        010.0000.0000 <br/>
-                        Email : abc@naver.com <br/>
-                        Copyright(c)2020 doodee All Right Reserved  
-                    </p>
-                </div>
-            </div>
+            </div>    
         </div>
     );  
 };
