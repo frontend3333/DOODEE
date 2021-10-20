@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Estimates.css'
 
-const ipt_event = (e) =>{
-    console.log(e.target.value);
-    if (e.target.value === ""){
-        console.log("input plz");
-    }
-};
+
 
 const Estimates = () => {
+    const [bkcolor, setbkcolor] = useState("borderBottom: '1px solid black'");
+    const ipt_event = (e) =>{
+        console.log(e.target.value);
+        if (e.target.value === ""){
+            console.log("input some value plz!");
+            this.setState({
+                    borderBottom: "1px solid black"
+            })
+        }
+    };
     return (
         <>
             <div className="Estimates-container">
