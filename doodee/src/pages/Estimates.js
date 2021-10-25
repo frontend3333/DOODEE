@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
 import './Estimates.css'
 
-
-
 const Estimates = () => {
-    const [bkcolor, setbkcolor] = useState("borderBottom: '1px solid black'");
-    const ipt_event = (e) =>{
-        console.log(e.target.value);
+    const ipt_box = document.getElementsByTagName("input");
+    const data = ["","","","","","","","",""];
+    function changeMarginColor(item){
+        return item.target.style.borderBottomColor = "red";
+    };
+
+    const iptCheck = (e) =>{
         if (e.target.value === ""){
+            changeMarginColor(e);
             console.log("input some value plz!");
-            this.setState({
-                    borderBottom: "1px solid black"
-            })
         }
     };
+    
     return (
         <>
             <div className="Estimates-container">
@@ -44,22 +45,22 @@ const Estimates = () => {
                     <div className="estimation-grid-container">
                         <div className="grid-item">
                             <label className="ipt_top">
-                                <input type="text" onClick={ipt_event} placeholder="이름"/>
+                                <input type="text" placeholder="이름" onChange={iptCheck}/>
                             </label>
                         </div>
                         <div className="grid-item">
                             <label className="ipt_top">
-                                <input placeholder="연락처"/>                            
+                                <input placeholder="연락처" onChange={iptCheck}/>                            
                             </label>
                         </div>
                         <div className="grid-item">
                             <label className="ipt_top">
-                                <input placeholder="이메일"/>                            
+                                <input placeholder="이메일" onChange={iptCheck}/>                            
                             </label>
                         </div>                                     
                         <div className="grid-item">
                             <label className="ipt_top">
-                                <input placeholder="지역 (예: 안산 단원구 초지동 큐브빌라)"/>                            
+                                <input placeholder="지역 (예: 안산 단원구 초지동 큐브빌라)" onChange={iptCheck}/>                            
                             </label>
                         </div>   
                         <div className="grid-item">
@@ -76,20 +77,20 @@ const Estimates = () => {
                         </div>
                         <div className="grid-item">
                             <label className="ipt_top">
-                                <input placeholder="예정일 (예: 5월 중순 입주예정 or 10월 공사예정)"/>                            
+                                <input placeholder="예정일 (예: 5월 중순 입주예정 or 10월 공사예정)" onChange={iptCheck}/>                            
                             </label>
                         </div>
                         <div className="grid-item">
                             <h2>건물 연식</h2>
                             <div className="checkbox-container">
                                 <label className="ipt_on">
-                                    <input type="checkbox"/>
+                                    <input type="checkbox" defaultChecked/>
                                     <p>신축</p>
                                 </label>
                             </div>
                             <div className="checkbox-container">
                                 <label className="ipt_off">
-                                    <input type="checkbox"/>
+                                    <input type="checkbox" defaultChecked/>
                                     <p>~10년 미만</p> 
                                 </label>
                             </div>                            
@@ -116,13 +117,13 @@ const Estimates = () => {
                             <h2>평형대</h2>
                             <div className="checkbox-container">
                                 <label className="ipt_on">
-                                    <input type="checkbox"/>
+                                    <input type="checkbox" defaultChecked/>
                                     <p>10평형대~</p>
                                 </label>
                             </div>
                             <div className="checkbox-container">
                                 <label className="ipt_on">
-                                    <input type="checkbox"/>
+                                    <input type="checkbox" defaultChecked/>
                                     <p>20평형대~</p>
                                 </label>
                             </div>                            
