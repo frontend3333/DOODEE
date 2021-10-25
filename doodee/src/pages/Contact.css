@@ -20,14 +20,15 @@
 }
 
 .contact_form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    min-width: 300px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 20px;
-    margin: 0px 150px;
+    margin: 0 auto;
+    
 }
 
 .client_info {
@@ -85,16 +86,17 @@
 
 }
 .company_pic img {
-    width: 900px;
-    height: 400px;
+    width: 90%;
+    max-width: 900px;
+    min-width: 300px;
 
 }
 
 .contact_map{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 100px 0;
+    width: 90%;
+    max-width: 900px;
+    min-width: 300px;
+    margin: 100px auto;
 }
 
 .copyright p{
@@ -103,4 +105,29 @@
     font-family: "BrandonGrotW01-Light";
     font-size: 16px;
     margin-top: 200px;
+}
+
+
+/* MEDIA */
+@media (max-width: 1024px) {
+    .contact {
+        padding-top: 0;
+    }
+    
+    
+     
+}
+
+
+@media (max-width: 768px) {
+    
+    .contact_form {
+        display: block;        
+    }
+    .contact_form_items {
+        margin: 30px 0;
+    }
+    .contact_map{}
+
+
 }
