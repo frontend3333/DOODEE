@@ -1,7 +1,6 @@
 
 import React, { useState } from 'react';
-import './Estimates.css'
-import React from 'react';
+import './Estimates.css';
 
 const Estimates = () => {
     const ipt_box = document.getElementsByTagName("input");
