@@ -5,6 +5,7 @@ import './Estimates.css'
 const Estimates = () => {
     const ipt_box = document.getElementsByTagName("input");
     const data = ["","","","","","","","",""];
+    
     function changeMarginColor(item){
         return item.target.style.borderBottomColor = "red";
     };
