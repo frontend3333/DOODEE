@@ -199,6 +199,6 @@ button{
     grid-row-end: 9;
 }
 
-.submit:focus{
+.submit:hover{
     background-color: black;
 }
