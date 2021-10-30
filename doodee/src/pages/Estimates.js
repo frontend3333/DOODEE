@@ -13,7 +13,6 @@ const Estimates = () => {
     function changeMarginColor(item){
         return item.target.style.borderBottomColor = "red";
     };
-
     const iptCheck = (e) =>{
         if (e.target.value === ""){
             changeMarginColor(e);
