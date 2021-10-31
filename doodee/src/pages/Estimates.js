@@ -5,22 +5,45 @@ import './Estimates.css'
 
 const Estimates = () => {
     const [state, handleSubmit] = useForm("moqyzbpg");
+    const [disable, setDisable] = React.useState(false);
+    
     const ipt_box = document.getElementsByTagName("input");
-    const data = ["","","","","","","","",""];
+    const data = ['','','','',''];
     if (state.succeeded) {
         return <p>Thanks for joining!</p>;
     }
+
     function changeMarginColor(item){
         return item.target.style.borderBottomColor = "red";
     };
-    
+
     const iptCheck = (e) =>{
         if (e.target.value === ""){
             changeMarginColor(e);
+            console.log(ipt_box);
+            console.log(ipt_box[0].value);
             console.log("input some value plz!");
         }
     };
     
+    const summitCheck = () =>{
+        if ((ipt_box[0].value === data[0] ||
+            ipt_box[1].value === data[1] ||
+            ipt_box[2].value === data[2] ||
+            ipt_box[3].value === data[3] ||
+            ipt_box[4].value === data[4])&&(
+                true
+            )){
+            console.log("nothing");
+            alert('값을 입력해 주세요!');
+        }
+        else{
+            setDisable(false);                
+            console.log("changeState");
+            alert('전송 완료!');
+        }
+    };
+
     return (
         <>
             <form onSubmit={handleSubmit}>
@@ -181,7 +204,7 @@ const Estimates = () => {
                             </div>
                             <div className="grid-item">
                                 <div className="button-container">
-                                    <button className="submit" onClick={() => alert('전송 완료!')} type="submit" disabled={state.submitting}>견적 요청</button>
+                                    <button className="submit" disabled={disable} onClick={summitCheck} type="submit" >견적 요청</button>
                                 </div>
                             </div>
                         </div>
