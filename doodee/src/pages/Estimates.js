@@ -31,10 +31,21 @@ const Estimates = () => {
             ipt_box[1].value === data[1] ||
             ipt_box[2].value === data[2] ||
             ipt_box[3].value === data[3] ||
-            ipt_box[4].value === data[4])&&(
-                true
-            )){
+            ipt_box[4].value === data[4])&&
+            (ipt_box[5].checked === false &&
+            ipt_box[6].checked === false && 
+            ipt_box[7].checked === false && 
+            ipt_box[8].checked === false && 
+            ipt_box[9].checked === false)&&
+            (ipt_box[10].checked === false &&
+            ipt_box[11].checked === false &&
+            ipt_box[12].checked === false &&
+            ipt_box[13].checked === false &&
+            ipt_box[14].checked === false &&
+            ipt_box[15].checked === false &&
+            ipt_box[16].checked === false)&&(ipt_box[18].checked === false)){
             console.log("nothing");
+            console.log(ipt_box[18].checked);
             alert('값을 입력해 주세요!');
         }
         else{
