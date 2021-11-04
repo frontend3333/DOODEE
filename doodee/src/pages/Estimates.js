@@ -45,6 +45,7 @@ const Estimates = () => {
             ipt_box[15].checked === false &&
             ipt_box[16].checked === false)&&(ipt_box[18].checked === false)){
             console.log("nothing");
+            
             console.log(ipt_box[18].checked);
             alert('값을 입력해 주세요!');
         }
