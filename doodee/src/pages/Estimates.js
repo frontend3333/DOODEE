@@ -6,9 +6,10 @@ import './Estimates.css'
 const Estimates = () => {
     const [state, handleSubmit] = useForm("moqyzbpg");
     const [disable, setDisable] = React.useState(false);
-    
+    const [iptState, setIptState] = React.useState(false);
+    const slt_box = document.getElementsByTagName("select");
     const ipt_box = document.getElementsByTagName("input");
-    const data = ['','','','',''];
+    let data = ['','','','',''];
     if (state.succeeded) {
         return <p>Thanks for joining!</p>;
     }
@@ -20,34 +21,29 @@ const Estimates = () => {
     const iptCheck = (e) =>{
         if (e.target.value === ""){
             changeMarginColor(e);
-            console.log(ipt_box);
-            console.log(ipt_box[0].value);
             console.log("input some value plz!");
         }
     };
     
     const summitCheck = () =>{
-        if ((ipt_box[0].value === data[0] ||
-            ipt_box[1].value === data[1] ||
-            ipt_box[2].value === data[2] ||
-            ipt_box[3].value === data[3] ||
-            ipt_box[4].value === data[4])&&
-            (ipt_box[5].checked === false &&
-            ipt_box[6].checked === false && 
-            ipt_box[7].checked === false && 
-            ipt_box[8].checked === false && 
-            ipt_box[9].checked === false)&&
-            (ipt_box[10].checked === false &&
-            ipt_box[11].checked === false &&
-            ipt_box[12].checked === false &&
-            ipt_box[13].checked === false &&
-            ipt_box[14].checked === false &&
-            ipt_box[15].checked === false &&
-            ipt_box[16].checked === false)&&(ipt_box[18].checked === false)){
-            console.log("nothing");
-            
-            console.log(ipt_box[18].checked);
-            alert('값을 입력해 주세요!');
+        const iptBox_data = [ipt_box[0].value,ipt_box[1].value,ipt_box[2].value,ipt_box[3].value,ipt_box[4].value];
+        const isCheckedAge = [ipt_box[5].checked,ipt_box[6].checked,ipt_box[7].checked,ipt_box[8].checked,ipt_box[9].checked];
+        const isCheckedSize = [ipt_box[10].checked,ipt_box[11].checked,ipt_box[12].checked,ipt_box[13].checked,ipt_box[14].checked,ipt_box[15].checked,ipt_box[16].checked];
+        const isCheckedAgree = ipt_box[18].checked;
+        if(iptBox_data.includes("")){
+            alert('인풋값을 입력해 주세요!');
+        }
+        else if(slt_box[0].options[slt_box[0].selectedIndex].value==="default"){
+            alert("인테리어 공간을 체크 해주세요!")
+        }
+        else if(isCheckedAge.filter(state => state === false).length===5){
+            alert('건물 연식을 체크해 주세요!');
+        }        
+        else if(isCheckedSize.filter(state => state === false).length===7){
+            alert('평형대를 체크해 주세요!');
+        }
+        else if(isCheckedAgree === false){
+            alert("이용약관에 동의 해주세요!");
         }
         else{
             setDisable(false);                
@@ -59,7 +55,7 @@ const Estimates = () => {
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="email">ryeongee21@naver.com</label>
+                <label htmlFor="email"></label>
                 <div className="Estimates-container">
                     <div className="first-container-item">
                         <h1>estimates</h1>
