@@ -107,3 +107,80 @@ span {
 }
 
 
+/* MEDIA */
+@media (max-width: 1024px) {
+    
+    .second-grid-item h2 {
+        margin: 0;
+        text-align: center;
+        font-family: 맑은 고딕, malgun gothic, apple sd gothic neo, applegothic, sans-serif;
+        font-size: 16px;
+        line-height: 100px;
+        letter-spacing: 0.1em;
+    }
+    .cp-grid-item h2 {
+        margin-top: 30px;
+        font-size: 14px;
+        font-style: normal;
+        line-height: normal;
+        float: left;
+    }
+    .cp-grid-item p {
+        margin-top: 30px;
+        font-size: 15px;
+        line-height: normal;
+        float: left;
+    }
+}
+@media (max-width: 720px) {
+    .grid-container{
+        display: grid;
+        margin: 0 10px 0 10px;
+        grid-template-columns: 100%;
+        grid-template-rows: 100px 300px 800px;
+    }
+    .first-grid-item{
+        margin:0px;
+        display: block;
+        height: 100px;
+    }
+    .cp-grid-container {
+        display: grid;
+        height: 600px;
+        grid-template-columns: 90px 70px 2fr;
+        grid-template-rows: repeat(7, 83px);
+    }
+    .first-grid-item h1 {
+        font-size: 20px;
+        height: 100px;
+        width: auto;
+    }
+    .first-grid-item h1 p{
+        height: 100px;
+        width: auto;
+    }
+    .second-grid-item h2 {
+        margin: 0;
+        text-align: center;
+        font-family: 맑은 고딕, malgun gothic, apple sd gothic neo, applegothic, sans-serif;
+        font-size: 10px;
+        line-height: 100px;
+        letter-spacing: 0.1em;
+    }
+    .cp-grid-item h2 {
+        margin-top: 30px;
+        font-size: 10px;
+        font-style: normal;
+        line-height: normal;
+        float: left;
+    }
+    .third-grid-container{
+        margin:0px;
+    }
+    .cp-grid-item p {
+        margin-top: 30px;
+        font-size: 5px;
+        line-height: normal;
+        float: left;
+    }
+}

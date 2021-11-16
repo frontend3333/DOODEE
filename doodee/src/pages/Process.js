@@ -10,7 +10,7 @@ const Process = () => {
                 <div className='grid-container'>
                     <div className='first-grid-item'>
                         <h1>
-                            <span>process</span>
+                            process
                         </h1>
                         
                     </div>
@@ -53,7 +53,9 @@ const Process = () => {
                         <div className='cp-grid-container'>
                             <div className='cp-grid-item'></div>
                             <div className='cp-grid-item'>
-                                <h2>1. 상담신청</h2>
+                                <h2>
+                                    1. 상담신청
+                                </h2>
                             </div>
                             <div className='cp-grid-item'>
                                 <p>홈페이지나 전화를 통해 상담신청</p>

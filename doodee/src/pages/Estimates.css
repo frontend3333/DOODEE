@@ -37,7 +37,7 @@
 }
 .third-container-item{
     width:inherit;
-    height:1132px;
+    height:auto;
     padding: 0 120px 0 120px;
     box-sizing: border-box;
 }
@@ -201,4 +201,29 @@ button{
 
 .submit:hover{
     background-color: black;
+}
+
+/* MEDIA */
+@media screen and (max-width: 1024px) {
+
+
+}
+
+
+@media (max-width: 1024px) {
+    .estimation-grid-container{
+        display: block;
+    }
+    .grid-item{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    .grid-item:nth-child(7),.grid-item:nth-child(8){
+        display: inline-block;
+    }
+
+    .grid-item:nth-child(9) .ipt_bot {
+        width: 385px;
+    }
 }

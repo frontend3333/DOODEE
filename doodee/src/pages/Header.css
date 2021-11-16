@@ -5,10 +5,9 @@
     transform: translate(-50%);
     top:0;
     width:100%;
-    max-width: 1250px;
-    height: 40px;
+    height: 0px;
     padding: 20px;
-    background-color: white;
+    background-color: none;
     z-index: 100;
     box-sizing: border-box;
 }
@@ -51,7 +50,7 @@
 }
 
 .projects-dropdown {
-    background-color: white;
+    background-color: none;
 }
 
 .projects-dropdown-menus {
@@ -103,6 +102,7 @@
         left: 0;
         transform: translate(-1%);
         padding: 10px;
+        background-color: white;
     
     }
 
@@ -112,6 +112,7 @@
 
     .header .toggle-on {
         display: block;
+        background-color: white;
     }
 
     .phone-num {
@@ -129,7 +130,7 @@
         width: 100%;
         margin : 0;
         padding: 16px 0;
-        /* border-bottom: 1px solid #cacaca; */
+        border-bottom: 1px solid #cacaca;
     }
 
     .menus .projects-dropdown-menus {
@@ -138,10 +139,5 @@
 
     .header .toggle-btn {
         display: inline;
-
     }
-
-
-
-
 }
