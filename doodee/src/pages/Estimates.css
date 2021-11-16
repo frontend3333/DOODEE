@@ -204,13 +204,11 @@ button{
 }
 
 /* MEDIA */
-@media screen and (max-width: 1024px) {
-
-
-}
-
 
 @media (max-width: 1024px) {
+    .Estimates-container{
+        margin-top:0px; /*for header*/
+    }
     .estimation-grid-container{
         display: block;
     }
@@ -225,5 +223,19 @@ button{
 
     .grid-item:nth-child(9) .ipt_bot {
         width: 385px;
+    }
+}
+
+@media (max-width: 720px) {
+    .first-container-item{
+        height: 100px;
+    }
+    .first-container-item h1{
+        line-height: 100px;
+        font-size: 20px;
+        height: 100px;
+    }
+    .Explanation-container span{
+        font-size: 10px;
     }
 }
